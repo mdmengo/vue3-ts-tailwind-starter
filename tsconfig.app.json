@@ -1,0 +1,27 @@
+{
+    "extends": "./tsconfig.common.json",
+    "compilerOptions": {
+        "composite": true,
+        "sourceMap": false,
+        "allowSyntheticDefaultImports": true,
+        "useDefineForClassFields": true,
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@components/*": ["./src/components/*"],
+            "@pages/*": ["./src/pages/*"]
+        },
+        "types": [
+            "vite/client"
+        ]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.vue",
+        "src/*.vue",
+        "src/*.ts"
+    ],
+    "exclude": ["node_modules", "dist", "public"]
+}
